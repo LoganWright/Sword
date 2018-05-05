@@ -697,6 +697,9 @@ extension Guild {
     
     /// VIP voice channels for crisp audio
     case vipRegions = "VIP_REGIONS"
+
+    /// Is a verified discord
+    case verified = "VERIFIED"
   }
   
   /// Level of verification for admisitrative actions for guild
