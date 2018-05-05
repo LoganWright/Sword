@@ -139,7 +139,9 @@ public class Guild: Updatable {
 
     if let features = json["features"] as? [String] {
       for feature in features {
-        self.features.append(Feature(rawValue: feature)!)
+        if let value = Feature(rawValue: feature) {
+            self.features.append(value)
+        }
       }
     }
 
@@ -216,7 +218,9 @@ public class Guild: Updatable {
     
     if let features = json["features"] as? [String] {
       for feature in features {
-        self.features.append(Feature(rawValue: feature)!)
+        if let value = Feature(rawValue: feature) {
+            self.features.append(value)
+        }
       }
     }
     
